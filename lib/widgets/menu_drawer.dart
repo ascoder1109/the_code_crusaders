@@ -26,14 +26,14 @@ class MenuDrawer extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         backgroundImage:
-                            AssetImage('assets/images/profile_pic.jpg'),
+                            AssetImage('assets/images/main_profile.png'),
                         radius: 50,
                       ),
                       SizedBox(
                         height: 8.0,
                       ),
                       Text(
-                        "Dhiraj Agarwal",
+                        "Aditya Singh",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
