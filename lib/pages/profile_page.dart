@@ -1,3 +1,4 @@
+import 'package:dnk_exportease/pages/chat_page.dart';
 import 'package:dnk_exportease/widgets/Items_card.dart';
 import 'package:dnk_exportease/widgets/deals_in.dart';
 import 'package:dnk_exportease/widgets/profile_page_photo.dart';
@@ -15,7 +16,7 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           children: [
             Image.asset('assets/images/cover_image.png'),
-            Padding(
+            const Padding(
               padding: const EdgeInsets.all(8.0),
               child: ProfilePagePhoto(),
             ),
@@ -34,11 +35,53 @@ class ProfilePage extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             DealsInChip(),
-            Text(
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                      child: ElevatedButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => ChatPage(),
+                            ));
+                          },
+                          icon: const Icon(Icons.chat, size: 20),
+                          label: const Text('Chat'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ))),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.email, size: 20),
+                          label: const Text('Email'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ))),
+                ],
+              ),
+            ),
+            const Text(
               "Marketplace",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            ItemsCard()
+            const ItemsCard()
           ],
         ),
       ),

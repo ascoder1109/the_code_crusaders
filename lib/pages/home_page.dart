@@ -1,3 +1,4 @@
+import 'package:dnk_exportease/widgets/Items_card.dart';
 import 'package:dnk_exportease/widgets/chip_below_search_bar.dart';
 import 'package:dnk_exportease/widgets/menu_drawer.dart';
 import 'package:dnk_exportease/widgets/offer_page_rotation.dart';
@@ -15,13 +16,17 @@ class HomePage extends StatelessWidget {
         title: Text("DNK ExportEase"),
       ),
       drawer: const MenuDrawer(),
-      body: Column(
-        children: [
-          SearchBarMyWidget(),
-          ChipBelowSearchBar(),
-          OfferPageRotation(),
-          SellersProfile(),
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            SearchBarMyWidget(),
+            ChipBelowSearchBar(),
+            OfferPageRotation(),
+            SellersProfile(),
+            ItemsCard()
+          ],
+        ),
       ),
     );
   }

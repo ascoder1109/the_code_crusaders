@@ -1,3 +1,4 @@
+import 'package:dnk_exportease/pages/chat_page.dart';
 import 'package:dnk_exportease/pages/home_page.dart';
 import 'package:dnk_exportease/pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromRGBO(0, 123, 255, 1)),
         useMaterial3: true,
       ),
-      home: const ProfilePage(),
+      home: const HomePage(),
     );
   }
 }
