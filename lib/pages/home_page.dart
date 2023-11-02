@@ -13,7 +13,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("DNK ExportEase"),
+        title: Text(
+          "DNK ExportEase",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       drawer: const MenuDrawer(),
       body: SingleChildScrollView(
@@ -23,8 +26,46 @@ class HomePage extends StatelessWidget {
             SearchBarMyWidget(),
             ChipBelowSearchBar(),
             OfferPageRotation(),
-            SellersProfile(),
-            ItemsCard()
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start, // Align to the left
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "Sellers Profile",
+                    style: TextStyle(
+                      fontSize: 22, // Adjust the font size as needed
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Container(
+                  color: Color.fromRGBO(247, 247, 247, 1),
+                  child: SellersProfile()),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start, // Align to the left
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "Recently Viewed",
+                    style: TextStyle(
+                      fontSize: 22, // Adjust the font size as needed
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            ItemsCard(),
           ],
         ),
       ),

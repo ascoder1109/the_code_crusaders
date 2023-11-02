@@ -20,8 +20,8 @@ class SellersProfile extends StatelessWidget {
                 color: Colors.white, // Set the background color
                 borderRadius: BorderRadius.circular(30), // Set rounded corners
                 border: Border.all(
-                    color: const Color.fromRGBO(
-                        52, 147, 255, 1)), // Set a black border
+                    color:
+                        Color.fromRGBO(255, 255, 255, 1)), // Set a black border
               ),
               child: Card(
                 elevation: 0, // Set elevation to 0 to remove shadows
@@ -86,9 +86,8 @@ class SellersProfile extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white, // Set the background color
                 borderRadius: BorderRadius.circular(30), // Set rounded corners
-                border: Border.all(
-                    color:
-                        Color.fromRGBO(52, 147, 255, 1)), // Set a black border
+                border:
+                    Border.all(color: Color(0xFFFFFFFF)), // Set a black border
               ),
               child: Card(
                 elevation: 0, // Set elevation to 0 to remove shadows
@@ -155,8 +154,8 @@ class SellersProfile extends StatelessWidget {
                 color: Colors.white, // Set the background color
                 borderRadius: BorderRadius.circular(30), // Set rounded corners
                 border: Border.all(
-                    color: const Color.fromRGBO(
-                        52, 147, 255, 1)), // Set a black border
+                    color: Color.fromARGB(
+                        255, 255, 255, 255)), // Set a black border
               ),
               child: Card(
                 elevation: 0, // Set elevation to 0 to remove shadows
@@ -223,8 +222,8 @@ class SellersProfile extends StatelessWidget {
                 color: Colors.white, // Set the background color
                 borderRadius: BorderRadius.circular(30), // Set rounded corners
                 border: Border.all(
-                    color: const Color.fromRGBO(
-                        52, 147, 255, 1)), // Set a black border
+                    color: Color.fromARGB(
+                        255, 255, 255, 255)), // Set a black border
               ),
               child: Card(
                 elevation: 0, // Set elevation to 0 to remove shadows
