@@ -1,6 +1,7 @@
 import 'package:dnk_exportease/pages/chat_page.dart';
 import 'package:dnk_exportease/widgets/Items_card.dart';
 import 'package:dnk_exportease/widgets/deals_in.dart';
+import 'package:dnk_exportease/widgets/five_star.dart';
 import 'package:dnk_exportease/widgets/profile_page_photo.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,32 @@ class ProfilePage extends StatelessWidget {
             ),
             Text(
               "DNK ID: 124626255d6",
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 20,
+                    ),
+                    Icon(Icons.star, color: Colors.yellow, size: 20),
+                    Icon(Icons.star, color: Colors.yellow, size: 20),
+                    Icon(Icons.star, size: 20),
+                    Text(
+                      "(5K)",
+                      style: TextStyle(fontSize: 12),
+                    ),
+                  ],
+                ),
+              ],
             ),
             SizedBox(
               height: 12,
