@@ -1,3 +1,4 @@
+import 'package:dnk_exportease/pages/edit_marketplace.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDrawer extends StatelessWidget {
@@ -14,7 +15,11 @@ class ProfileDrawer extends StatelessWidget {
           ),
           ListTile(
             title: (Text("Edit Marketplace")),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => EditMarketPlace(),
+              ));
+            },
           ),
           ListTile(
             title: (Text("Help")),
@@ -22,6 +27,10 @@ class ProfileDrawer extends StatelessWidget {
           ),
           ListTile(
             title: (Text("Document Verification")),
+            onTap: () {},
+          ),
+          ListTile(
+            title: (Text("Report a Problem")),
             onTap: () {},
           )
         ],

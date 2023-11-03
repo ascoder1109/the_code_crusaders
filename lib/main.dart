@@ -1,4 +1,5 @@
 import 'package:dnk_exportease/pages/chat_page.dart';
+import 'package:dnk_exportease/pages/edit_marketplace.dart';
 import 'package:dnk_exportease/pages/home_page.dart';
 import 'package:dnk_exportease/pages/product_detail_page.dart';
 import 'package:dnk_exportease/pages/profile_page.dart';

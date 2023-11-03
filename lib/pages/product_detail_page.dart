@@ -1,4 +1,5 @@
 import 'package:dnk_exportease/widgets/five_star.dart';
+import 'package:dnk_exportease/widgets/star_rating.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatefulWidget {
@@ -9,6 +10,14 @@ class ProductDetailPage extends StatefulWidget {
 }
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
+  int _rating = 0;
+
+  void _onRatingChanged(int newRating) {
+    setState(() {
+      _rating = newRating;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +57,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               ),
               Text("₹2",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40)),
-              Text("Minimum Order Quantity : 10",
+              Text("Minimum Order Quantity : 100",
                   style: TextStyle(fontSize: 17)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -94,7 +103,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     Text("Average Star", style: TextStyle(fontSize: 17)),
-                    FiveStar()
+                    FiveStar(),
+                    Text(
+                      "Rate The Product",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    StarRating(
+                      rating: _rating,
+                      onRatingChanged: _onRatingChanged,
+                    ),
                   ],
                 ),
               )
