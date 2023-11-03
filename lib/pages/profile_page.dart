@@ -1,6 +1,7 @@
 import 'package:dnk_exportease/pages/chat_page.dart';
 import 'package:dnk_exportease/widgets/Items_card.dart';
 import 'package:dnk_exportease/widgets/deals_in.dart';
+import 'package:dnk_exportease/widgets/profile_drawer.dart';
 import 'package:dnk_exportease/widgets/five_star.dart';
 import 'package:dnk_exportease/widgets/profile_page_photo.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+      endDrawer: ProfileDrawer(),
       backgroundColor: Color(0xFFFFFFFF),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
